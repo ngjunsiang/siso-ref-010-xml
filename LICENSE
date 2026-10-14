@@ -1,0 +1,28 @@
+SISO-REF-010 enumerations — license and attribution
+==================================================
+
+The files SISO-REF-010.xml and SISO-REF-010.xsd in this repository are
+unmodified extractions from the official SISO distribution zip and are
+redistributed under the following license (from that distribution):
+
+<![CDATA[
+Copyright © 2026 by the Simulation Interoperability Standards Organization, Inc.
+7901 4th St N, Suite 300-4043
+St. Petersburg, FL 33702
+All rights reserved.
+
+Schema and API: SISO hereby grants a general, royalty-free license to copy, distribute, display, and
+make derivative works from this material, for all purposes, provided that any use of the material
+contains the following attribution: “Reprinted with permission from SISO Inc.” Should
+a reader require additional information, contact the SISO Inc. Board of Directors.
+
+Documentation: SISO hereby grants a general, royalty-free license to copy, distribute,
+display, and make derivative works from this material, for noncommercial purposes, provided that
+any use of the material contains the following attribution: “Reprinted with permission from SISO Inc.” 
+The material may not be used for a commercial purpose without express written
+permission from the SISO Inc Board of Directors.
+
+SISO Inc. Board of Directors
+7901 4th St N, Suite 300-4043
+St. Petersburg, FL 33702
+]]>
