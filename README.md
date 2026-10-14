@@ -9,14 +9,15 @@ the enumerations instead of scraping a zip each build.
 
 | File | What it is |
 |---|---|
-| `SISO-REF-010.xml` | The enumerations (uids → enum/bitfield tables, with `size`, rows, descriptions, UUIDs) |
-| `SISO-REF-010.xsd` | SISO's schema for the above |
+| `SISO-REF-010.xml` | The enumerations (uids → enum/bitfield tables, with `size`, rows, descriptions, UUIDs) — **root always holds the latest mirrored version** |
+| `SISO-REF-010.xsd` | SISO's schema for the above (byte-identical across v35/v37 — schema 2.7) |
+| `v35/` | Archived v35 copies (introduced when a newer version takes over the root) |
 
 ## Tags = official versions
 
 Each official release is tagged exactly as SISO numbers it (`v31`, …,
-`v37`, …). This repository currently carries **v37** (release
-2026-05-25).
+`v37`, …). This repository currently carries **v37** (root; release 2026-05-25) and
+**v35** (`v35/`; release date 2025-04-27).
 
 ## Policy
 
@@ -26,6 +27,18 @@ Each official release is tagged exactly as SISO numbers it (`v31`, …,
 - The authoritative source is always the official SISO distribution
   (SISO_RID_1003262). If this mirror ever disagrees with an official zip,
   the zip wins — please open an issue.
+
+## Provenance manifest (v35)
+
+- Source: official SISO distribution `SISO-REF-010-2025 Enumerations v35`
+  (full local extraction incl. doc/pdf/xlsx/RPR; zip itself not retained,
+  so file-level hashes below are the verification anchors)
+- `SISO-REF-010.xml` SHA-256:
+  `7df8fe406dc7e57290b8af99f89fec1563728372d18f2303d3a1de0183818826`
+  (6,179,202 bytes; 492 enum/bitfield tables)
+- `SISO-REF-010.xsd` SHA-256:
+  `4f6cb195ac133daf745e3fd51e070534c99fc2cb5b53a8dc9a58e8c9e49327ab`
+  (identical to v37's)
 
 ## Provenance manifest (v37)
 
