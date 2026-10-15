@@ -1,9 +1,18 @@
 SISO-REF-010 enumerations — license and attribution
 ==================================================
 
-The files SISO-REF-010.xml and SISO-REF-010.xsd in this repository are
-unmodified extractions from the official SISO distribution zip and are
-redistributed under the following license (from that distribution):
+The committed tree carries only the schema/API material from the official
+SISO distribution: SISO-REF-010.xml, SISO-REF-010.xsd, the RPR-Enumerations
+XMLs, the XSL transforms, the Makefile, and the distribution README.txt.
+Under the license below these are royalty-free for all purposes with the
+attribution “Reprinted with permission from SISO Inc.” The document
+renditions (the v37 .doc/.htm/.pdf/.xlsx enumerations files) and the
+SISO-REF-010.1-2019 Operations Manual are licensed for noncommercial
+purposes only, so since tag v0.9.0 they are not redistributed in the tree
+and are purged from git history (the v37-docs tag was rewritten to a
+docs-free commit accordingly); they are kept locally under the gitignored
+.references/ directory. The distribution's own license text follows
+verbatim.
 
 <![CDATA[
 Copyright © 2026 by the Simulation Interoperability Standards Organization, Inc.
