@@ -28,6 +28,27 @@ Each official release is tagged exactly as SISO numbers it (`v31`, …,
   (SISO_RID_1003262). If this mirror ever disagrees with an official zip,
   the zip wins — please open an issue.
 
+## Schema notes for consumers
+
+Observed facts about the mirrored format that parsers must know
+(verified against v37 by census; v35 ships the same schema 2.7, so the
+same rules are expected to hold):
+
+- **Member labels live in `description`, not `name`.** Every
+  `enumrow` carries its human-readable label in the `description`
+  attribute — census: 11,226/11,226 `enumrow` elements have
+  `description`, **0 have `name`**. `name` exists only on the table
+  elements themselves (`<enum uid="6" name="Force ID">`,
+  `<bitfield ... name="...">`). Grouped tables (e.g. Country [UID 29],
+  which nests `category`/`subcategory`/`specific` rows instead of flat
+  `enumrow`s) also label via `description`, so grouped-table traversal
+  reads the same attribute.
+- **The root carries a default namespace.** `<ebv xmlns=
+  "http://www.sisostds.org/schemas/SISO-REF-010/2.7">` means naive
+  tag matching finds nothing (`ElementTree`'s `iter("enum")` returns
+  an empty iteration, since tags parse as `{ns}enum`). Match by local
+  name or bind the namespace.
+
 ## Provenance manifest (v35)
 
 - Source: official SISO distribution `SISO-REF-010-2025 Enumerations v35`
