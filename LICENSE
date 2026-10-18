@@ -14,7 +14,6 @@ docs-free commit accordingly); they are kept locally under the gitignored
 .references/ directory. The distribution's own license text follows
 verbatim.
 
-<![CDATA[
 Copyright © 2026 by the Simulation Interoperability Standards Organization, Inc.
 7901 4th St N, Suite 300-4043
 St. Petersburg, FL 33702
@@ -34,4 +33,3 @@ permission from the SISO Inc Board of Directors.
 SISO Inc. Board of Directors
 7901 4th St N, Suite 300-4043
 St. Petersburg, FL 33702
-]]>
