@@ -1,0 +1,28 @@
+name: validate
+
+# Guard the mirror's byte-exactness claim: the XML must validate against
+# SISO's own XSD, and every other XML-family file must stay well-formed.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libxml2-utils
+
+      - name: Validate current SISO-REF-010.xml (v37) against the XSD
+        run: xmllint --nonet --noout --schema SISO-REF-010.xsd SISO-REF-010.xml
+
+      - name: Validate archived v35 copy against its XSD
+        run: xmllint --nonet --noout --schema v35/SISO-REF-010.xsd v35/SISO-REF-010.xml
+
+      - name: Check RPR enumerations and XSL transforms are well-formed
+        run: |
+          xmllint --nonet --noout RPR-Enumerations_v2.0.xml RPR-Enumerations_v3.0.xml
+          xmllint --nonet --noout SISO-REF-010-c99h.xsl SISO-REF-010-spreadsheetml.xsl
