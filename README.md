@@ -1,5 +1,15 @@
 # siso-ref-010-xml
 
+> **Deprecated as a direct dependency (2026-10-18).** Downstream
+> consumers should depend on
+> [siso-ref-010-python](https://github.com/ngjunsiang/siso-ref-010-python)
+> instead: it vendors this mirror as its generation-time pin and ships
+> the data as an installable Python package (open-dis-python's dis7-ng
+> generator switched to the package and removed its submodule of this
+> repo). The mirror remains the faithful, version-tagged source of
+> record it always was; no further downstream-facing changes are
+> planned.
+
 A faithful, version-tagged **mirror of the machine-readable SISO-REF-010
 material** — the enumerations (XML + XSD), the RPR FOM enumeration outputs,
 and the translation tooling — extracted unmodified from the official SISO
