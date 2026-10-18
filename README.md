@@ -7,7 +7,9 @@ distribution zips. This exists so that DIS tooling can pin a git ref for
 the enumerations instead of scraping a zip each build, and so dependent
 repositories can import it as a submodule that carries only royalty-free
 schema/API content. The licensed document renditions (noncommercial-only)
-are **not** distributed in the tree — see `.references/` below.
+are **not** distributed in the tree — see `.references/` below. The
+[wiki](https://github.com/ngjunsiang/siso-ref-010-xml/wiki) records the key
+decisions behind this setup and their rationale, in plain language.
 
 ## Contents
 
